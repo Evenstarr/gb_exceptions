@@ -27,7 +27,7 @@ public class Task3 {
         int b = 3;
 
         System.out.println(a / b);
-        printSum(null, null);
+        printSum(12, 15);
 
         try {
             int[] abc = {1, 2};
