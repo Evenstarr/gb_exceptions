@@ -22,13 +22,12 @@ public class Task3 {
         //        }
 
         // Может, я не так поняла задание, но здесь константы, поэтому исключений по делению никогда не возникнет.
-        // NullPointerException тоже никогда не возникнет.
 
         int a = 90;
         int b = 3;
 
         System.out.println(a / b);
-        printSum(23, 234);
+        printSum(null, null);
 
         try {
             int[] abc = {1, 2};
@@ -41,4 +40,12 @@ public class Task3 {
     public static void printSum(int int1, int int2) {
         System.out.println("Sum = " + (int1 + int2));
     }
+    // Или иначе
+    /* public static void printSum(Integer int1, Integer int2) {
+       if (int1 != null && int2 != null) {
+            System.out.println("Sum = " + (int1 + int2));
+       } else {
+            System.out.println("Такое не складываем");
+       }
+    }*/
 }
