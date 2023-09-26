@@ -21,20 +21,21 @@ public class Task3 {
         //            System.out.println("Что-то пошло не так...");
         //        }
 
-        // Вероятно, я тоже не поняла задание, но тут же тоже константные значения, которые никогда не вызовут исключения.
-        // Единственная ошибка, которая подсвечивается при компиляции - необъявленная функция.
-
         int a = 90;
         int b = 3;
 
         System.out.println(a / b);
-
         printSum(23, 234);
-        int[] abc = { 1, 2 };
-        abc[1] = 9;
+
+        try {
+            int[] abc = {1, 2};
+            abc[3] = 9;
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println("Индекс массива выходит за пределы допустимого диапазона!");
+        }
     }
 
-    private static void printSum(int i, int i1) {
-        System.out.println("Sum = " + (i + i1));
+    public static void printSum(int int1, int int2) {
+        System.out.println("Sum = " + (int1 + int2));
     }
 }
